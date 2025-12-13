@@ -6,7 +6,7 @@
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "themes/gtk/Colloid-gtk-theme"]
 	path = themes/gtk/Colloid-gtk-theme
-	url = https://github.com/vinceliuice/Colloid-gtk-theme
+	url = https://github.com/vinceliuice/Colloid-gtk-theme.git
 [submodule "themes/sddm/obscure-sddm-theme"]
 	path = themes/sddm/obscure-sddm-theme
-	url = https://github.com/saatvik333/obscure-sddm-theme
+	url = https://github.com/saatvik333/obscure-sddm-theme.git
