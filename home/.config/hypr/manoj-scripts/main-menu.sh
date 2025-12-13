@@ -5,7 +5,7 @@
 # GitHub: https://github.com/binoymanoj
 
 # Terminal to use
-TERMINAL="kitty"
+TERMINAL="alacritty"
 # Browser to use
 BROWSER="brave"
 # Bookmarks directory
