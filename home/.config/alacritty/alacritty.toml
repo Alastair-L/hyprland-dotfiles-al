@@ -1,7 +1,7 @@
 # Alacritty Configuration
 
 [general]
-import = ["./colors.toml"]
+# import = ["./colors.toml"]
 
 [window]
 padding.x = 10
@@ -15,7 +15,7 @@ size = 12
 
 # NOTE: alacritty doesn't support ligatures, just using this since it's my preferred font with nerdfonts.
 [font.normal]
-family = "Liga SFMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 
 [scrolling]
 multiplier = 6

@@ -4,6 +4,8 @@ dotfiles_home=~/hyprland-dotfiles-al/home
 
 # Desktop
 ln -sT "$dotfiles_home"/.config/hypr ~/.config/hypr
+ln -sT "$dotfiles_home"/.config/scripts ~/.config/scripts
+ln -sT "$dotfiles_home"/.config/swaync ~/.config/swaync
 ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
 
 
@@ -15,6 +17,3 @@ ln -sT "$dotfiles_home"/.config/shell.env ~/.config/shell.env
 ln -sT "$dotfiles_home"/.config/starship ~/.config/starship
 
 
-
-# Low risk
-ln -sT "$dotfiles_home"/.config/fastfetch ~/.config/fastfetch

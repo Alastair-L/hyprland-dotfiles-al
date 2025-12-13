@@ -6,7 +6,7 @@
 #   -r, --region [fullscreen|workspace|selection]  Screenshot region (default: selection)
 #   -h, --help                                     Show this help message
 
-SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
+SCREENSHOT_DIR="/tmp"
 REGION="selection"
 
 # Check dependencies
