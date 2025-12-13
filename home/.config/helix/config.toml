@@ -1,0 +1,88 @@
+ # Helix Configuration
+ # Author: Binoy Manoj
+ # GitHub: https://github.com/binoymanoj
+
+# Theme
+theme = "onedark"
+
+[editor]
+# Display options
+line-number = "relative"       # show relative line numbers
+
+# Other editor behaviors
+scrolloff = 5                # keep 5 lines visible above/below cursor
+
+# Cursor shape
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+# Key mappings
+"G" = "goto_file_end"
+
+[keys.normal.space]
+"q" = ":quit"
+"Q" = ":quit-all"
+
+[keys.normal.space.w]
+"r" = ":write"
+
+[keys.normal.space.t]
+# Quick theme toggles (hand-picked)
+"1" = ":theme amberwood"
+"2" = ":theme yo_berry"
+"3" = ":theme zed_onedark"
+"4" = ":theme onedark"
+"5" = ":theme github_dark"
+"6" = ":theme dracula_at_night"
+"7" = ":theme ayu_dark"
+"8" = ":theme doom-one"
+"9" = ":theme everblush"
+"0" = ":theme earl_grey"
+
+# Better window navigation
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+
+# Split windows
+C-w = { v = "vsplit", s = "hsplit", q = "wclose" }
+
+# Auto pairs (saving for later, if necessary)
+# [editor.auto-pairs]
+# '(' = ')'
+# '{' = '}'
+# '[' = ']'
+# '"' = '"'
+# "'" = "'"
+# '`' = '`'
+# '<' = '>'
+
+# Search settings
+# [editor.search]
+# smart-case = true
+# wrap-around = true
+
+# LSP settings
+# [editor.lsp]
+# enable = true
+# display-messages = true
+# auto-signature-help = true
+# display-inlay-hints = true
+# display-signature-help-docs = true
+# snippets = true
+# goto-reference-include-declaration = true
+
+# Status line
+# [editor.statusline]
+# left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+# center = ["file-type"]
+# right = ["diagnostics", "selections", "register", "position", "file-encoding"]
+# separator = "│"
+# mode.normal = "NORMAL"
+# mode.insert = "INSERT"
+# mode.select = "SELECT"
+

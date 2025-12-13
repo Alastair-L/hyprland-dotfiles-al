@@ -7,6 +7,18 @@ ln -sT "$dotfiles_home"/.config/hypr ~/.config/hypr
 ln -sT "$dotfiles_home"/.config/scripts ~/.config/scripts
 ln -sT "$dotfiles_home"/.config/swaync ~/.config/swaync
 ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
+ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
+
+
+ln -sT "$dotfiles_home"/.config/bat ~/.config/bat
+ln -sT "$dotfiles_home"/.config/doom ~/.config/doom
+ln -sT "$dotfiles_home"/.config/dunst ~/.config/dunst
+ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
+ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
+ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
+ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
+ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
+ln -sT "$dotfiles_home"/.config/waybar ~/.config/waybar
 
 
 # Terminal
