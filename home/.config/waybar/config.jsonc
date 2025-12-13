@@ -103,17 +103,6 @@
       "󰁹"
     ]
   },
-  "bluetooth": {
-    "format": "󰂯 {status}",
-    "format-disabled": "󰂲",
-    "format-off": "󰂲",
-    "format-connected": "󰂱 {num_connections}",
-    "tooltip-format": "{controller_alias}\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
-    "on-click": "bluetoothctl power toggle",
-    "on-click-right": "blueman-manager"
-  },
   "network": {
     "format": "{icon} {bandwidthDownBytes}",
     "format-disconnected": "󰖪",
