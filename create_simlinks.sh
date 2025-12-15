@@ -1,6 +1,39 @@
 
-dotfiles_home=~/hyprland-dotfiles-al/home
+dotfiles_home=$HOME/hyprland-dotfiles-al/home
 
+
+configs=(
+  bat
+  doom
+  dunst
+  fastfetch
+  ghostty
+  git
+  helix
+  hypr
+  hyprpanel
+  kanata
+  kitty
+  mpv
+  nvim
+  playerctl
+  posting
+  qBittorrent
+  qutebrowser
+  rofi
+  screenshots
+  scripts
+  tmux
+  waybar
+  waypaper
+  yazi
+  zathura
+  zed
+)
+
+for cfg in "${configs[@]}"; do
+  ln -sT "$dotfiles_home/.config/$cfg" "$HOME/.config/$cfg"
+done
 
 # Desktop
 # ln -sT "$dotfiles_home"/.config/hypr ~/.config/hypr
