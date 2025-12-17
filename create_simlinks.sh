@@ -30,6 +30,9 @@ all_configs=(
   yazi
   zathura
   zed
+  zsh
+
+  mimeapps.list
 )
 
 
@@ -39,6 +42,11 @@ current_configs=(
   scripts
   waybar
   qutebrowser
+  zsh
+
+  scripts
+  git
+  mimeapps.list
 )
 
 # mapfile -t delete_configs < <(
@@ -51,7 +59,7 @@ current_configs=(
 # 1. Clear out configs iff they are symlinks
 #######################################
 for cfg in "${all_configs[@]}"; do
-  target="$HOME/.config/$cfg"
+  target="$XDG_CONFIG_HOME/$cfg"
 
   if [[ -L "$target" ]]; then
     echo "Removing symlink: $target"
@@ -64,7 +72,7 @@ done
 #######################################
 for cfg in "${current_configs[@]}"; do
   src="$dotfiles_home/.config/$cfg"
-  dst="$HOME/.config/$cfg"
+  dst="$XDG_CONFIG_HOME/$cfg"
 
   if [[ ! -e "$src" ]]; then
     echo "Warning: source does not exist, skipping: $src"
@@ -74,3 +82,5 @@ for cfg in "${current_configs[@]}"; do
   echo "Linking: $dst → $src"
   ln -sT "$src" "$dst"
 done
+
+ln -sT "$XDG_CONFIG_HOME/zsh/.zshrc" "$HOME/.zshrc"

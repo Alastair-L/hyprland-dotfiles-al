@@ -1,0 +1,23 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Floorp-NFP2G3.desktop
+x-scheme-handler/https=userapp-Floorp-NFP2G3.desktop
+x-scheme-handler/chrome=userapp-Floorp-NFP2G3.desktop
+text/html=userapp-Floorp-NFP2G3.desktop
+application/x-extension-htm=userapp-Floorp-NFP2G3.desktop
+application/x-extension-html=userapp-Floorp-NFP2G3.desktop
+application/x-extension-shtml=userapp-Floorp-NFP2G3.desktop
+application/xhtml+xml=userapp-Floorp-NFP2G3.desktop
+application/x-extension-xhtml=userapp-Floorp-NFP2G3.desktop
+application/x-extension-xht=userapp-Floorp-NFP2G3.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Floorp-NFP2G3.desktop;
+x-scheme-handler/https=userapp-Floorp-NFP2G3.desktop;
+x-scheme-handler/chrome=userapp-Floorp-NFP2G3.desktop;
+text/html=userapp-Floorp-NFP2G3.desktop;
+application/x-extension-htm=userapp-Floorp-NFP2G3.desktop;
+application/x-extension-html=userapp-Floorp-NFP2G3.desktop;
+application/x-extension-shtml=userapp-Floorp-NFP2G3.desktop;
+application/xhtml+xml=userapp-Floorp-NFP2G3.desktop;
+application/x-extension-xhtml=userapp-Floorp-NFP2G3.desktop;
+application/x-extension-xht=userapp-Floorp-NFP2G3.desktop;

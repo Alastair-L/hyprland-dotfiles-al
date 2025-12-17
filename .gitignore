@@ -76,6 +76,11 @@ zsh/.histfile
 bash/.bash_history
 fish/fish_history
 
+**/zsh/*
+!**/zsh/.zshrc
+!**/zsh/.zshrc.pre-oh-my-zsh
+!**/zsh/.zshrc.pre-oh-my-zsh
+
 # Environment & Secrets
 *.env
 .env.*
@@ -100,15 +105,6 @@ Thumbs.db
 *.orig
 *.save
 
-# OS Generated Files
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon?
-dconf/
-user-*
-mimeapps.list
 
 # Windows
 Thumbs.db

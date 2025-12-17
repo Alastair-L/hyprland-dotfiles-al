@@ -137,8 +137,8 @@ export KEYTIMEOUT=1
 #########################################
 
 # Keybindings for History
-bindkey '^p' history-search-backward    # Search backwards in history using CTRL + p  (eg. curl then CTRL + P)
-bindkey '^n' history-search-forward     # Search forwards in history using CTRL + n
+# bindkey '^p' history-search-backward    # Search backwards in history using CTRL + p  (eg. curl then CTRL + P)
+# bindkey '^n' history-search-forward     # Search forwards in history using CTRL + n
 
 # Additional key bindings for better completion
 bindkey '^[[Z' reverse-menu-complete  # Shift-Tab to reverse completion menu
@@ -153,7 +153,7 @@ bindkey '^y' autosuggest-accept       # Ctrl+Y to accept suggestion
 eval "$(fzf --zsh)"
 
 # ZOXIDE for better cd
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 
 ##########################################
 ############## SHELL CONFIG ##############
@@ -164,45 +164,20 @@ autoload -Uz promptinit && promptinit
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
-# GO path
-export GOPATH=$HOME/go 
 # Enhanced Path
-export PATH=$PATH:$HOME/bin:/usr/local/bin:$GOPATH/bin:$HOME/.config/emacs/bin/
-
-# Change cursor shape based on mode
-function zle-keymap-select {
-  case $KEYMAP in
-    vicmd) echo -ne "\e[2 q" ;;  # Block cursor (normal mode)
-    viins|main) echo -ne "\e[6 q" ;;  # Line cursor (insert mode)
-  esac
-}
-zle -N zle-keymap-select
-
-# Initialize cursor on line editor start
-function zle-line-init {
-    echo -ne "\e[6 q"  # Line cursor for insert mode
-}
-zle -N zle-line-init
-
-# Also force cursor update when prompt is shown
-function precmd() {
-    vcs_info
-    # auto_fetch_on_first_visit      # git pull & push info
-    echo -ne "\e[6 q"  # Ensure line cursor when prompt appears
-}
+# export PATH=$PATH:$HOME/bin:/usr/local/bin
 
 bindkey '^H' backward-kill-word
 
-# Better command line editing
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '^x^e' edit-command-line
+# # Better command line editing
+# autoload -U edit-command-line
+# zle -N edit-command-line
+# bindkey '^x^e' edit-command-line
 
 # Aliases with softer colored output
 alias ls='ls --color=auto'
 alias ll='ls -lah'
-alias la='ls -A'
-alias l='ls -CF'
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias grep='grep --color=auto'
@@ -277,33 +252,33 @@ PROMPT='%F{183}%~%f${vcs_info_msg_0_}
 ############## CUSTOM ##############
 ####################################
 
-# NVM setup
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# # NVM setup
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# PNPM Setup
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# # PNPM Setup
+# export PNPM_HOME="$HOME/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 # PNPM End
 
 #####################################
 ############## EXPORTS ##############
 #####################################
 
-export EDITOR=nvim
+export EDITOR=vscodium
 
 #####################################
 ############## ALIASES ##############
 #####################################
 
-alias cd="z"             # replacing cd with z (zoxide) for jumping to location from history
+# alias cd="z"             # replacing cd with z (zoxide) for jumping to location from history
 alias ff="fastfetch"     # ff for fastfetch
-alias vi="nvim"          # vi for neovim
-alias zta="zathura"      # zta for zathura PDF viewer
+# alias vi="nvim"          # vi for neovim
+# alias zta="zathura"      # zta for zathura PDF viewer
 alias open="xdg-open"    # xdg-open with open
 
 # Git Aliases
@@ -358,43 +333,43 @@ alias yayoutdated='yay -Qua'                      # Check for outdated AUR packa
 # Full system upgrade (pacman && aur - yay)
 alias fullupgrade='sudo pacman -Syyu --noconfirm && yay -Syu --aur --noconfirm && yay -Scc'
 # Pacman & Yay package removing script
-alias pkgdel='~/.config/scripts/remove-pkg.sh'
+# alias pkgdel='~/.config/scripts/remove-pkg.sh'
 
 # Task warrior Aliases (comment the following Aliases out if you're not using it)
-alias t='task'
-alias ta='task add'
-alias tc='task context'
-# Task warrior + Time warrior
-alias ts="task start"
-alias td="task done"
-alias tsp="task stop"
-alias ta="task active"
-alias tll="task list"
+# alias t='task'
+# alias ta='task add'
+# alias tc='task context'
+# # Task warrior + Time warrior
+# alias ts="task start"
+# alias td="task done"
+# alias tsp="task stop"
+# alias ta="task active"
+# alias tll="task list"
 
-TIMEW_GRAPH_SCRIPT="$HOME/.config/scripts/timewarrior-graph.sh"
+# TIMEW_GRAPH_SCRIPT="$HOME/.config/scripts/timewarrior-graph.sh"
 
 # Time warrior Aliases (comment the following Aliases out if you're not using it)
-alias tw="timew"
-alias tws="timew start"
-alias twp="timew stop"
-# Export and visualize day
-alias twday='timew export :day > /tmp/timew-day.json && bash $TIMEW_GRAPH_SCRIPT /tmp/timew-day.json'
-# Export and visualize week
-alias twweek='timew export :week > /tmp/timew-week.json && bash $TIMEW_GRAPH_SCRIPT /tmp/timew-week.json'
-# Export and visualize month
-alias twmonth='timew export :month > /tmp/timew-month.json && bash $TIMEW_GRAPH_SCRIPT /tmp/timew-month.json'
-# Export and visualize year
-alias twyear='timew export :year > /tmp/timew-year.json && bash $TIMEW_GRAPH_SCRIPT /tmp/timew-year.json'
+# alias tw="timew"
+# alias tws="timew start"
+# alias twp="timew stop"
+# # Export and visualize day
+# alias twday='timew export :day > /tmp/timew-day.json && bash $TIMEW_GRAPH_SCRIPT /tmp/timew-day.json'
+# # Export and visualize week
+# alias twweek='timew export :week > /tmp/timew-week.json && bash $TIMEW_GRAPH_SCRIPT /tmp/timew-week.json'
+# # Export and visualize month
+# alias twmonth='timew export :month > /tmp/timew-month.json && bash $TIMEW_GRAPH_SCRIPT /tmp/timew-month.json'
+# # Export and visualize year
+# alias twyear='timew export :year > /tmp/timew-year.json && bash $TIMEW_GRAPH_SCRIPT /tmp/timew-year.json'
 
 # YT DLP Aliases (comment the following Aliases out if you're not using it)
-alias ytdlp='yt-dlp'
-alias ytdlpmp3='yt-dlp -x --audio-format mp3'
+# alias ytdlp='yt-dlp'
+# alias ytdlpmp3='yt-dlp -x --audio-format mp3'
 
-# POSTING API Client Aliases (comment the following Aliases out if you're not using it)
-alias posting='cd "$(find ~/Codes/api-collection -mindepth 1 -maxdepth 1 -type d ! -name '.git' | fzf)" && posting --collection ./ --env ./.env'   # this script list all the directories inside ~/Codes/api-collection in a fuzzy finder and by selecting the dir you want it opens in POSTING TUI
+# # POSTING API Client Aliases (comment the following Aliases out if you're not using it)
+# alias posting='cd "$(find ~/Codes/api-collection -mindepth 1 -maxdepth 1 -type d ! -name '.git' | fzf)" && posting --collection ./ --env ./.env'   # this script list all the directories inside ~/Codes/api-collection in a fuzzy finder and by selecting the dir you want it opens in POSTING TUI
 
-# Tailscale's taildrop (get command for receiving files from other devices)
-alias taildropget='sudo tailscale file get .'
+# # Tailscale's taildrop (get command for receiving files from other devices)
+# alias taildropget='sudo tailscale file get .'
 
 # Run Tmux on terminal open (commented out for now, sometimes it gets annoying. It opens default session on every terminal opened. Might need in the future)
 # if command -v tmux &> /dev/null; then
