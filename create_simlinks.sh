@@ -44,6 +44,8 @@ current_configs=(
   qutebrowser
   zsh
 
+  dunst
+
   scripts
   git
   mimeapps.list
