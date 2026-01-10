@@ -110,4 +110,11 @@ alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias code='vscodium'
 
+# alias cd="z"             # replacing cd with z (zoxide) for jumping to location from history
+alias ff="fastfetch"     # ff for fastfetch
+# alias vi="nvim"          # vi for neovim
+# alias zta="zathura"      # zta for zathura PDF viewer
+alias open="xdg-open"    # xdg-open with open
+
+
 eval "$(starship init zsh)"
