@@ -32,6 +32,7 @@ all_configs=(
   zed
   zsh
 
+  ml4w
   mimeapps.list
 )
 
@@ -43,6 +44,9 @@ current_configs=(
   waybar
   qutebrowser
   zsh
+
+  ml4w
+  sidepad
 
   fastfetch
 
@@ -88,3 +92,8 @@ for cfg in "${current_configs[@]}"; do
 done
 
 ln -sT "$XDG_CONFIG_HOME/zsh/.zshrc" "$HOME/.zshrc"
+
+ln -sT "$dotfiles_home/.config/toolkits/gtk-3.0" "$XDG_CONFIG_HOME/gtk-3.0"
+ln -sT "$dotfiles_home/.config/toolkits/gtk-4.0" "$XDG_CONFIG_HOME/gtk-4.0"
+ln -sT "$dotfiles_home/.config/toolkits/qt6ct" "$XDG_CONFIG_HOME/qt6ct" 
+

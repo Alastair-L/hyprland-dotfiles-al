@@ -78,6 +78,7 @@
 
 **/zsh/*
 !**/zsh/.zshrc
+!**/zsh/zshrc
 !**/zsh/.zshrc.pre-oh-my-zsh
 !**/zsh/.zshrc.pre-oh-my-zsh
 
