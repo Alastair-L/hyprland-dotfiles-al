@@ -44,6 +44,8 @@ current_configs=(
   qutebrowser
   zsh
 
+  fastfetch
+
   dunst
 
   scripts

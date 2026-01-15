@@ -1,80 +1,80 @@
 # IDE & Editor Configurations
-Code/
-Cursor/
-.vscode/
-Kiro/
-configstore/
-blender/
+# Code/
+# Cursor/
+# .vscode/
+# Kiro/
+# configstore/
+# blender/
 
 # Development Tools & Languages
-go/
-gopls/
-flutter/
-fontforge/
-nextjs-nodejs/
+# go/
+# gopls/
+# flutter/
+# fontforge/
+# nextjs-nodejs/
 
 # Browsers
-google-chrome/
+# google-chrome/
 
 # Communication
-discord/
-Slack/
+# discord/
+# Slack/
 
 # Media & Entertainment
-spotify/
-obs-studio/
-LosslessCut/
-inkscape/
-obsidian/
-spotify-player/
-kew/lastPlaylist.m3u
-kew/kewlibrary
+# spotify/
+# obs-studio/
+# LosslessCut/
+# inkscape/
+# obsidian/
+# spotify-player/
+# kew/lastPlaylist.m3u
+# kew/kewlibrary
 
 # System & Utilities
-nwg-look/
-nwg-displays/
-systemd/
-balenaEtcher/
-yay/
-thefuck/
-qBittorrent/
-sherlock/
-eog/
-ranger/
-bottom/
-celluloid/
-s-tui/
-Thunar/
-waytrogen/
-qView/
+# nwg-look/
+# nwg-displays/
+# systemd/
+# balenaEtcher/
+# yay/
+# thefuck/
+# qBittorrent/
+# sherlock/
+# eog/
+# ranger/
+# bottom/
+# celluloid/
+# s-tui/
+# Thunar/
+# waytrogen/
+# qView/
 
 # Desktop Environment & Frameworks
-kde.org/
-ego/
-gtk-3.0/
-gtk-4.0/
-qt6ct/
-xfce4/
-xsettingsd/
-htop/
+# kde.org/
+# ego/
+# gtk-3.0/
+# gtk-4.0/
+# qt6ct/
+# xfce4/
+# xsettingsd/
+# htop/
 
 # Audio
-pulse/
+# pulse/
 
 # Electron Apps
-Electron/
-Notion/
+# Electron/
+# Notion/
 
 # Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyc
+# __pycache__/
+# *.py[cod]
+# *.pyo
+# *.pyc
 
 # Shell & Terminal History
-zsh/.histfile
-bash/.bash_history
-fish/fish_history
+# zsh/.histfile
+# bash/.bash_history
+# fish/fish_history
 
 **/zsh/*
 !**/zsh/.zshrc
@@ -82,39 +82,39 @@ fish/fish_history
 !**/zsh/.zshrc.pre-oh-my-zsh
 
 # Environment & Secrets
-*.env
-.env.*
-!shell.env
+# *.env
+# .env.*
+# !shell.env
 
 # Temporary & Cache Files
-*.tmp
-*.temp
-*.cache
-*.log
-*.pid
-*.lock
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
+# *.tmp
+# *.temp
+# *.cache
+# *.log
+# *.pid
+# *.lock
+# .DS_Store
+# Thumbs.db
+# *.swp
+# *.swo
+# *~
 
 # Backup Files
-*.bak
-*.backup
-*.orig
-*.save
+# *.bak
+# *.backup
+# *.orig
+# *.save
 
 
 # Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
+# Thumbs.db
+# ehthumbs.db
+# Desktop.ini
+# $RECYCLE.BIN/
 
 # Linux
-.directory
-.Trash-*
+# .directory
+# .Trash-*
 
 # Archive Files (optional - uncomment if needed)
 # *.zip
