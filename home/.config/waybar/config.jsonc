@@ -9,7 +9,8 @@
   ],
   "modules-center": [
     "clock",
-    "custom/calendar"
+    "custom/calendar",
+    "custom/xwayland-hint"
   ],
   "modules-right": [
     "custom/night-light",
@@ -42,6 +43,14 @@
       "focused": "",
       "default": ""
     }
+  },
+  "hyprland/window": {
+    "format": "{initialTitle} (class: {class})"
+  },
+  "custom/xwayland-hint": {
+    "interval": 2,
+    "exec": "~/.config/waybar/scripts/xwayland-list.sh",
+    "format": "{}"
   },
   "clock": {
     "format": " {:%I:%M %p | %b %d}",

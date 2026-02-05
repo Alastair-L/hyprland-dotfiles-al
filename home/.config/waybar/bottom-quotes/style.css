@@ -1,0 +1,28 @@
+window#waybar {
+    background-color: transparent;
+}
+
+#custom-quote {
+    /* Colors & Glassmorphism */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle dark glass effect */
+    color: #ffffff; 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Shape & Spacing */
+    padding: 6px 20px;
+    border-radius: 12px;
+    
+    /* Typography */
+    font-family: "Outfit", "Arial", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    
+    /* Animation feel */
+    transition: all 0.3s ease;
+}
+
+/* Optional: Subtle hover effect */
+#custom-quote:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f8f8f2;
+}

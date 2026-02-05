@@ -14,6 +14,7 @@ TARGET_WIDTH=700
 TARGET_WIDTH_MAX=1000
 TOP_GAP=100
 BOTTOM_GAP=100
+STATE_FILE="/tmp/sidepad_prev_focus"
 
 # --- Script Variables ---
 HIDE_REQUESTED=0
@@ -179,6 +180,14 @@ if [[ "$HIDE_REQUESTED" -eq 1 ]]; then
         HEIGHT_CHANGE=$(( TARGET_HEIGHT - WINDOW_HEIGHT ))
 
         hyprctl --batch "dispatch resizewindowpixel $WIDTH_CHANGE $HEIGHT_CHANGE,address:$WINDOW_ADDRESS; dispatch movewindowpixel $PIXELS_TO_MOVE_X $PIXELS_TO_MOVE_Y,address:$WINDOW_ADDRESS"
+
+        CURRENT_FOCUS=$(hyprctl activewindow -j | jq -r '.address')
+
+        if [ -f "$STATE_FILE" ] && [ "$CURRENT_FOCUS" == "$WINDOW_ADDRESS" ]; then
+            PREV_ADDRESS=$(cat "$STATE_FILE")
+            hyprctl dispatch focuswindow address:"$PREV_ADDRESS"
+            rm "$STATE_FILE" # Clean up
+        fi
         echo "Operation completed."
     else
         echo "Window is already hidden."
@@ -189,6 +198,9 @@ fi
 # Case 2: Window is hidden, so show it.
 if (( WINDOW_X < 0 )); then
     echo "--- Showing window ---"
+    
+    hyprctl activewindow -j | jq -r '.address' > "$STATE_FILE"
+
     PIXELS_TO_MOVE_X=$(( VISIBLE_LEFT_GAP - WINDOW_X ))
     WIDTH_CHANGE=$(( TARGET_WIDTH - WINDOW_WIDTH ))
     PIXELS_TO_MOVE_Y=$(( TOP_GAP - WINDOW_Y ))
@@ -196,6 +208,7 @@ if (( WINDOW_X < 0 )); then
     HEIGHT_CHANGE=$(( TARGET_HEIGHT - WINDOW_HEIGHT ))
 
     hyprctl --batch "dispatch resizewindowpixel $WIDTH_CHANGE $HEIGHT_CHANGE,address:$WINDOW_ADDRESS; dispatch movewindowpixel $PIXELS_TO_MOVE_X $PIXELS_TO_MOVE_Y,address:$WINDOW_ADDRESS"
+    hyprctl dispatch focuswindow class:dotfiles-sidepad
     echo "Operation completed."
 
 # Case 3: Window is visible, so toggle its width and correct its position.

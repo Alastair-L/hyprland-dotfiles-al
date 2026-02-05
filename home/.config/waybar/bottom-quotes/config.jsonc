@@ -1,0 +1,17 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "spacing": 4,
+    "margin-bottom": 15,
+    "exclusive": false,
+    "modules-left": [],
+    "modules-center": ["custom/quote"],
+    "modules-right": [],
+
+    "custom/quote": {
+        "exec": "~/.config/waybar/bottom-quotes/quote_picker.sh",
+        "interval": 50,
+        "format": "{}",
+        "tooltip": false
+    }
+}

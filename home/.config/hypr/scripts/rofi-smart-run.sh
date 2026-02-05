@@ -9,7 +9,7 @@
 # - Google search: "linux tutorial :g" → Google
 # - DuckDuckGo search: "linux tutorial :d" → DuckDuckGo
 
-browser="brave"   # change to firefox, chromium, etc.
+browser="floorp"   # change to firefox, chromium, etc.
 
 # Build a small menu: tokens are shown as selectable items.
 menu=$'!g\n!d\n!y\n'    # rofi will show these; user may type any other input as well

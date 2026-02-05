@@ -8,7 +8,7 @@
 
 window#waybar {
     background: transparent;
-    color: #cdd6f4;
+    color: #023401;
 }
 
 #workspaces {
@@ -47,6 +47,7 @@ window#waybar {
 #pulseaudio,
 #custom-calendar,
 #custom-power,
+#custom-xwayland-hint,
 #tray {
     background-color: rgba(17, 17, 27, 0.6);
     padding: 0 10px;
@@ -54,6 +55,11 @@ window#waybar {
     border-radius: 10px;
     transition: all 0.2s ease;
     margin-right: 5px;
+}
+
+#custom-xwayland-hint {
+    color: #ff5555; /* Bright red */
+    font-weight: bold;
 }
 
 #clock {

@@ -1,0 +1,12 @@
+# Quote entries for waybar-quote
+
+# Modern Warfare (OG)
+"Remember, switching to your pistol is always faster than reloading" - Gaz
+"Remember, No Russian" - Makarov
+
+# Hyprland - https://github.com/hyprwm/Hyprland/blob/a2ecca936e9e1e7a77fa06e04f71bdc5fe8b4bbd/src/helpers/Splashes.hpp
+"Read the wiki." - Hyprland
+"Hello everyone this is YOUR daily dose of ‘read the wiki’" - Vaxry
+
+# Misc
+"I've bought the speedometer, and i will use the entire speedometer" - Unknown
