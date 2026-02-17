@@ -49,9 +49,13 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 
 alias paci='sudo pacman -S'
+alias yayu='yay -Syu'
+
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias code='vscodium'
+
+
 
 # alias cd="z"             # replacing cd with z (zoxide) for jumping to location from history
 alias ff="fastfetch"     # ff for fastfetch
