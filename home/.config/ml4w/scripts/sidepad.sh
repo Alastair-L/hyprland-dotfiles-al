@@ -56,6 +56,7 @@ select_sidepad() {
 # Dispatch parameters
 if [[ "$1" == "--init" ]]; then
     eval "$SIDEPAD_PATH --class '$SIDEPAD_CLASS' --init '$SIDEPAD_APP'"
+    eval "$SIDEPAD_PATH --class '$SIDEPAD_CLASS' $SIDEPAD_OPTOINS"
 elif [[ "$1" == "--hide" ]]; then
     eval "$SIDEPAD_PATH --class '$SIDEPAD_CLASS' --hide"
 elif [[ "$1" == "--test" ]]; then
@@ -65,5 +66,5 @@ elif [[ "$1" == "--kill" ]]; then
 elif [[ "$1" == "--select" ]]; then
     select_sidepad
 else
-    eval "$SIDEPAD_PATH --class '$SIDEPAD_CLASS' $SIDEPAD_OPTIONS"
+    eval "$SIDEPAD_PATH --class '$SIDEPAD_CLASS' $SIDEPAD_OPTOINS"
 fi
